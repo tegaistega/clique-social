@@ -9,11 +9,11 @@ A social network app in spring boot
 # Database
 <li>MySQL</li><br>
 
-#Frontend
+# Frontend
 <li>Thymeleaf</li>
 <li>html</li>
 <li>css</li>
 
-#How to Run Use This Code
+# How to Run Use This Code
 
 
