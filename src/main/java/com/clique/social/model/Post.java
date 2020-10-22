@@ -52,7 +52,7 @@ public class Post implements Serializable {
 
     @JsonManagedReference
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "post", fetch = FetchType.EAGER)
-    @OrderBy("descending")
+    @OrderBy("desc")
     private List<Comment> comments = new ArrayList<Comment>();
 
     public void addLike(Likes like){

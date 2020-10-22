@@ -1,4 +1,9 @@
 package com.clique.social.model;
-
-public class Role {
+/**
+ * @author Tadi's
+ * Tega Isiboge
+ * */
+public enum Role {
+    ROLE_USER,
+    ROLE_ADMIN
 }
