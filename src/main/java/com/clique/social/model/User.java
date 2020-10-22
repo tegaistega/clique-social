@@ -8,6 +8,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.Valid;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,9 +26,11 @@ public class User implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank
     @Column(unique = true)
     private String username;
 
+    @NotBlank
     private String password;
 
     private boolean enabled = true;
@@ -35,6 +40,7 @@ public class User implements Serializable {
 
     @JsonManagedReference
     @OneToOne(cascade = CascadeType.ALL)
+    @Valid
     private Profile profile;
 
     @JsonBackReference
@@ -47,7 +53,5 @@ public class User implements Serializable {
     public void addFollowing(User user){
         following.add(user);
     }
-
-
 
 }
