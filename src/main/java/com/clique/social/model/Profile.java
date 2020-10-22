@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.mail.Address;
 import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
